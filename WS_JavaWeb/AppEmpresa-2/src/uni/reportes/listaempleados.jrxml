@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a6e39a9-4f4e-4108-b3d1-e88188a3c41f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from empleados]]>
+	</queryString>
+	<field name="IDEMPLEADO" class="java.lang.String"/>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="APELLIDOS" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="193" y="47" width="170" height="20" uuid="0dfeb63a-73d3-412c-9c61-1444cb3f9e5e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTA DE EMPLEADOS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="29" y="3" width="89" height="64" uuid="c364d225-d955-4fb7-83a0-e9d7758de8fc"/>
+				<imageExpression><![CDATA["C:\\Program Files\\JavaCS\\Demos\\AppEmpresa\\src\\uni\\reportes\\coffee.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="29" y="15" width="175" height="20" uuid="01a0eabb-f803-4e55-a6b6-2cfc6bb60215"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm.ss a">
+				<reportElement x="329" y="15" width="100" height="20" uuid="5c791dba-d1ee-4ab4-a1dc-503c13ee3e96"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="38" width="100" height="20" uuid="15f2a875-4d44-413b-9e0a-a6bc677c57bd"/>
+				<text><![CDATA[IDEMPLEADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="36" width="100" height="20" uuid="d6b2eb9f-c28f-424e-912b-0053f0f5d3fb"/>
+				<text><![CDATA[APELLIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="38" width="100" height="20" uuid="419f8c51-d675-4105-84b7-58c589193fc9"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="38" width="100" height="20" uuid="e7ef4820-0211-4569-b221-c2dd2145b450"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="29" y="9" width="100" height="20" uuid="66317efc-bf09-4e03-bedf-d486c8b5115e"/>
+				<textFieldExpression><![CDATA[$F{IDEMPLEADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="9" width="100" height="20" uuid="0f49ea3f-725e-4e2e-9176-4f704ba4be3e"/>
+				<textFieldExpression><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="9" width="100" height="20" uuid="d8dd8b10-fcfd-4fb3-83d5-6acf9b76145c"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="9" width="100" height="20" uuid="0c5cb76a-2226-4025-9fba-ed0a03c1e7a6"/>
+				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

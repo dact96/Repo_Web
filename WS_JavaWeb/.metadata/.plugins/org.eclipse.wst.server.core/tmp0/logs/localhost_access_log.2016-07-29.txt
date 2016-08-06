@@ -1,0 +1,2 @@
+127.0.0.1 - - [29/Jul/2016:23:01:42 -0500] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [29/Jul/2016:23:01:43 -0500] "GET /ProyectoSistuni-1/WEB-INF/classes/pe/egcc/AppDB/PruebaBD.java HTTP/1.1" 404 1002
